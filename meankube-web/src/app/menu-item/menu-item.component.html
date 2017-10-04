@@ -1,0 +1,21 @@
+
+  <md-card class="example-card">
+      <md-card-header>
+        <md-card-title>{{product.title}}</md-card-title>
+        <md-card-subtitle>{{product.subTitle}}</md-card-subtitle>
+      </md-card-header>
+      <img height="150" width="200" src={{product.imageUrl}}>
+      <md-card-content>
+        <p>
+          {{product.desc}}
+        </p>
+      </md-card-content>
+      <md-card-actions>
+          <md-slide-toggle>To Go</md-slide-toggle>
+
+          <md-input-container class="menu-qty-width">
+              <input mdInput maxlength="2" placeholder="Quantity" value="1">
+          </md-input-container>
+        <button md-button>ORDER</button>
+      </md-card-actions>
+    </md-card>

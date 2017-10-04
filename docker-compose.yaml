@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+
+  meankube-db:
+    image: mongo
+    ports:
+      - 27017:27017
+
+  meankube-web:
+    build: ./meankube-web
+    ports: 
+      - 4200:4200
+
+  meankube-api:
+    build: ./meankube-api
+    ports: 
+      - 10010:10010
+    links:
+      - meankube-db
+
+  meankube-seed:
+    build: ./db
+    links:
+      - meankube-db
+    
+
+
+  
+
+  
+
+
