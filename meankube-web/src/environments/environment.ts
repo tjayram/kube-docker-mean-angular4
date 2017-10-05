@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  meankube_api: ("http://192.168.64.2:30734/")
+  meankube_api: ("http://localhost:10010/")
 };
