@@ -4,16 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { Http, HttpModule, Response, ResponseOptions } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  MdButtonModule, 
-  MdCheckboxModule, 
-  MdSidenavModule, 
-  MdToolbarModule,
-  MdCardModule,
-  MdGridListModule,
-  MdInputModule,
-  MdSliderModule,
-  MdSlideToggleModule,
-  MdIconModule
+  MatButtonModule, 
+  MatCheckboxModule, 
+  MatSidenavModule, 
+  MatToolbarModule,
+  MatCardModule,
+  MatGridListModule,
+  MatInputModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatIconModule
 } from '@angular/material';
 import 'hammerjs';
 
@@ -37,28 +37,28 @@ import { ProductServiceImpl } from './product-service-impl';
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    MdButtonModule, 
-    MdCheckboxModule,
-    MdSidenavModule,
-    MdToolbarModule,
-    MdCardModule,
-    MdGridListModule,
-    MdInputModule,
-    MdSliderModule,
-    MdSlideToggleModule,
-    MdIconModule
+    MatButtonModule, 
+    MatCheckboxModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatGridListModule,
+    MatInputModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatIconModule
   ],
   exports: [
-    MdButtonModule, 
-    MdCheckboxModule,
-    MdSidenavModule,
-    MdToolbarModule,
-    MdCardModule,
-    MdGridListModule,
-    MdInputModule,
-    MdSliderModule,
-    MdSlideToggleModule,
-    MdIconModule
+    MatButtonModule, 
+    MatCheckboxModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatGridListModule,
+    MatInputModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatIconModule
   ],
   providers: [
     {
