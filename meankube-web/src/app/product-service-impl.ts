@@ -12,18 +12,27 @@ export class ProductServiceImpl implements ProductService {
     private dbRef: any;
     private productSchema : any;
     private productModel: any;
+    private rootUrl: string;
 
 
 
     constructor(private http : Http) {
+        this.setRootUrl = this.setRootUrl.bind(this);
+    }
 
+    setRootUrl(apiUrl: string) : void {
+        console.log(apiUrl)
+        this.rootUrl = apiUrl.trim();
+        if(!apiUrl.endsWith("/")) {
+            this.rootUrl += "/";
+        }
     }
 
     getProducts() : Observable<Product[]> {
         
         let products = [];
 
-        let productsUrl = environment.meankube_api + "products";
+        let productsUrl = this.rootUrl + "products";
         console.log(productsUrl);
         
         return this.http

@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Http, HttpModule, Response, ResponseOptions } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatButtonModule, 
@@ -13,7 +14,8 @@ import {
   MatInputModule,
   MatSliderModule,
   MatSlideToggleModule,
-  MatIconModule
+  MatIconModule,
+  MatInput
 } from '@angular/material';
 import 'hammerjs';
 
@@ -24,6 +26,11 @@ import { MenuListComponent } from './menu-list/menu-list.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import { Product } from './product';
 import { ProductServiceImpl } from './product-service-impl';
+
+const routes:Routes = [
+  { path: "", redirectTo: "home", pathMatch: "full"},
+  { path: "products", component: MenuListComponent}
+]
 
 @NgModule({
   declarations: [
@@ -36,6 +43,7 @@ import { ProductServiceImpl } from './product-service-impl';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     MatButtonModule, 
     MatCheckboxModule,
@@ -46,9 +54,12 @@ import { ProductServiceImpl } from './product-service-impl';
     MatInputModule,
     MatSliderModule,
     MatSlideToggleModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule.forRoot(routes)
   ],
   exports: [
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule, 
     MatCheckboxModule,
     MatSidenavModule,
@@ -58,7 +69,8 @@ import { ProductServiceImpl } from './product-service-impl';
     MatInputModule,
     MatSliderModule,
     MatSlideToggleModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule
   ],
   providers: [
     {

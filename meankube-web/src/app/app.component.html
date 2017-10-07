@@ -17,7 +17,17 @@
   
   </mat-toolbar>
 
-  <app-menu-list></app-menu-list>
+  <h2 class="ui header">Update MEANKube API</h2> 
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form"> 
+    <div class="field">  
+      <mat-form-field>
+        <input width="300" matInput id="meanKubeAPIUrl" placeholder="MEANKube API" name="meanKubeAPIUrl" [formControl]="myForm.controls['meanKubeAPIUrl']">
+      </mat-form-field>
+      <button type="submit" class="ui button">Submit</button> 
+    </div>
+  </form>
+
+  <router-outlet></router-outlet>
 
 
 
