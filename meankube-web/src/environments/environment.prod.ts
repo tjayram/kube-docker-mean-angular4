@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  meankube_api: ("http://localhost:10010/")
 };
